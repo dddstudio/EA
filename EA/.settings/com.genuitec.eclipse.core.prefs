@@ -1,0 +1,4 @@
+#Wed Jan 21 21:23:54 CST 2015
+eclipse.preferences.version=1
+validator.Checked=WebRoot/js/jquery.min.js,WebRoot/EAUI/base/worker.sql.js,WebRoot/EAUI/base/sql.js,WebRoot/js/locale/easyui-lang-zh_CN.js,WebRoot/jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js,WebRoot/EAUI/view/evaluationStandard/js/jquery-1.7.2.js,WebRoot/EAUI/base/shell-post.js,WebRoot/jquery-easyui-1.4.1/jquery.min.js
+validator.Unchecked=

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>报告</title>
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+	<div style="position: fixed;width: 100%">
+		<div><input type="button" value="生成报告" onClick="projectReportGeneration()" style="width: 100px;height: 30px;background-color: rgb(148, 148, 255);font-size: large;"></div>
+		<div><input type="button" value="导出报告" onClick="exportReport()" style="width: 100px;height: 30px;background-color: rgb(148, 148, 255);font-size: large;"></div>
+	</div>
+	<div style="width: 800px; margin: 0 auto;">
+		<div id="reportDiv" style="width: 800px; margin: 0 auto;">
+			<div id="reportTitle">
+				<h2 style="text-align: center; font-size: 48px;">
+					<span id="engineerNamInReport"></span>项目报告
+				</h2>
+				<table style="border: 1px solid; width: 500px; margin: 0 auto;">
+					<tr>
+						<td>模板编号</td>
+						<td style="width: 300px"><span id="templateIdInReport"
+							style="width: 300px; height: 25px;"></span></td>
+					</tr>
+					<tr>
+						<td>建筑名称</td>
+						<td style="width: 300px"><span id="buildingNumInReport"
+							style="width: 300px; height: 25px;" ></span></td>
+					</tr>
+					<tr>
+						<td>城市名称</td>
+						<td style="width: 300px"><span id="cityInReport"
+							style="width: 300px; height: 25px;" ></span></td>
+					</tr>
+					<tr>
+						<td>报告日期</td>
+						<td style="width: 300px"><span id="dateForReport"
+							style="width: 300px; height: 25px;" ></span></td>
+					</tr>
+				</table>
+			</div>
+			<div id="in_report">
+				<h1>一、室内评价项目</h1>
+				<div id="in_hot_result">
+				<h2>热环境评价结果</h2>
+					<table id="hot_result_table" style="width: 100%">
+					</table>
+					<div id="chat_div_hot" style="top: 40; width: 100%; height: 300px;"></div>
+				</div>
+
+				<div id="in_light_result">
+				<h2>光环境评价结果</h2>
+					<table id="light_result_table" style="width: 100%">
+					</table>
+					<div id="chat_div_light"
+						style="top: 40; width: 100%; height: 300px;"></div>
+				</div>
+
+				<div id="in_sound_result">
+				<h2>声环境评价结果</h2>
+					<table id="in_light_sound_table" style="width: 100%">
+					</table>
+					<div id="in_chat_div_sound"
+						style="top: 40; width: 100%; height: 300px;"></div>
+				</div>
+
+				<div id="in_air_result">
+				<h2>空气环境评价结果</h2>
+					<table id="light_air_in_table" style="width: 100%">
+					</table>
+					<div id="chat_div_air" style="top: 40; width: 100%; height: 300px;display:none"></div>
+				</div>
+			</div>
+			<div id="out_report">
+				<h1>二、室外评价项目</h1>
+				<div id="out_air_result">
+				<h2>大气环境</h2>
+					<table id="light_air_out_table" style="width: 100%">
+					</table>
+				</div>
+				<div id="out_soil_result">
+				<h2>土壤环境评价结果</h2>
+					<table id="light_soil_table" style="width: 100%">
+					</table>
+				</div>
+				<div id="out_water_result">
+				<h2>水环境评价结果</h2>
+					<table id="light_water_table" style="width: 100%">
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

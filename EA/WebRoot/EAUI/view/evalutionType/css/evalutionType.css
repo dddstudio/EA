@@ -1,0 +1,13 @@
+table {
+			border-collapse:collapse;
+		}
+	tr {
+			height: 25px;
+		} 
+	td {border:#ccc solid 1px;
+			text-align:center
+		}
+	th {border:#ccc solid 1px;
+			text-align:center
+		}
+		

@@ -1,0 +1,22 @@
+table {
+			border-collapse:collapse;
+		}
+	td {border:#ccc solid 1px;
+			text-align:center
+		}
+	th {border:#ccc solid 1px;
+			text-align:center
+		}
+		
+#addProjectBtn{
+ 		    width:80px;
+  		    height:27px;
+  		    margin-right:130px
+       }
+
+#editProjectBtn{
+ 		    width:80px;
+  		    height:27px;
+       }
+ 
+ }

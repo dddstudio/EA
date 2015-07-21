@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>污染指标界面</title>
+<meta charset="UTF-8">
+
+</head>
+<style>
+.fitem{
+   
+}
+
+</style>
+<body>
+<script type="text/javascript">
+	$(function(){evalutionTypeLoad();});
+</script>
+	<div title="评价类别">
+			<div style="padding-top:40px;font-size:25px; align:center;text-align:center;">
+				评价类别列表
+			</div>
+			<div>
+				<div style="padding-top:40px">
+
+
+					<div id="evalutionTypetb">
+						<a href="#" class="easyui-linkbutton"
+							data-options="iconCls:'icon-add',plain:true" onclick="evalutionTypeObj.evalutionTypeAdd()">新增</a>
+						<a href="#" class="easyui-linkbutton"
+							data-options="iconCls:'icon-edit',plain:true"
+							onclick="evalutionTypeObj.evalutionTypeEdit()">编辑</a> <a href="#" class="easyui-linkbutton"
+							data-options="iconCls:'icon-remove',plain:true"
+							onclick="evalutionTypeObj.evalutionTypeRemove()">删除</a>
+					</div>
+					<table id="evalutionTypeTable" style="width:100%;">
+
+					</table>
+				</div>
+			</div>
+
+	</div>
+
+	
+	<div id="addEvalutionTypeBtn" class="easyui-dialog" style="width:600px;height:400px;padding-top:20px;padding-left:10px;"
+		 closed="true"
+		buttons="#dlg-buttons">
+		<form id="evalutionTypefm" method="post" novalidate>
+		   <div style="text-align:center;font-size:15px; font-weight:bold;">基本信息</div>
+            <div class="fitem" style="text-align:center;padding:20px;display:none">
+				<label>评价类别编号:</label> 
+				<input id="evalutionTypeNum" name="evalutionTypeNum" type="text" value="" />
+			</div>
+			<div class="fitem" style="text-align:center;padding:20px;">
+				<label>评价类别名称:</label> <input id="evalutionTypeName" size="15" style="width:200px;" name="evalutionTypeName" type="text" value="" align="right">
+			</div>
+			<div class="fitem" style="text-align:center;padding:20px;">
+				<label>环&nbsp;&nbsp;境&nbsp;类&nbsp;型&nbsp;&nbsp;:</label> 
+				<select id="EnvironmentType"  style="width:200px;" >
+					<option name="indoor" value="室内" >室内</option>
+					<option name="outdoor" value="室外">室外</option>
+				</select>
+			</div>
+
+			<div class="fitem" style="text-align:center;padding:20px;">
+				<label>备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注:</label>
+	<!-- 		    <input id="remark" name="remark" type="text" size="15" style="width:200px;"/> -->
+	        <textarea rows="3" cols="23" id="evalutionTypeRemark"></textarea>
+			</div>
+		</form>
+	</div>
+
+	<div id="dlg-buttons">
+		<a id="evalutionType_save" href="#" class="easyui-linkbutton" iconCls="icon-ok"
+			onclick="evalutionTypeObj.evalutionTypeSave()">保存</a> <a href="#" class="easyui-linkbutton"
+			iconCls="icon-cancel" onclick="javascript:$('#addEvalutionTypeBtn').dialog('close')">取消</a>
+	</div>
+</body>
+</html>

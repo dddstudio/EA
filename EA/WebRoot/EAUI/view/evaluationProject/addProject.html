@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>addProject.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  
+  <body >
+	<div class="evaluationProjectItem" style="background: url(images/content1.jpg); background-size: cover;">
+		<div style="padding:10px;font-size:15px">编辑评价工程
+			<input type="hidden" id="hiddenEngineerNum">
+			<input type="hidden" id="hiddenOutdoorEnvironmentNum">
+			<input type="hidden" id="hiddenIndoorEnvironmentNum">
+		</div>
+		<div style="padding-left:15px;padding-top:10px;">
+			工程编码：<input type="text" id="engineerCode" style="width:250px;height:20px;">
+				   <span id="errorTitle" style="color:red"></span>
+		</div>	
+ 		<div style="padding-left:15px;padding-top:10px;">
+			工程名称：<input type="text" id="engineerNam" style="width:250px;height:20px;">
+		</div>	
+		<div style="padding-left:15px;padding-top:10px;">
+			所在城市：<input type="text" id="engineerCity" style="width:250px;height:20px;">
+		</div>			
+		<div style="padding-left:15px;padding-top:20px;float:left">
+			工程描述：
+		</div>
+		<div style="padding-top:10px;">
+			<textarea id="engineerDes" style="width:590px;height:100px;"></textarea>
+		</div>
+		<div style="float:left;padding-left:15px;padding-top:20px;">
+			<div style="float:left;">评价项目：</div>
+		<div style="float:left;">
+			<table id="outerDoorTable" style="width:590px;height:150px;">
+			</table>
+			<table id="innerDoorTable" style="width:590px;height:150px;margin-top:5px">
+			</table>
+		</div>
+		</div>
+		<div style="padding-left:300px;padding-top:20px;clear:both">
+ 			<a onClick="saveWholeProject()" id="addProjectBtn" class="easyui-linkbutton">保存新增</a>
+			<a onClick="updateWholeProject()" id="editProjectBtn" class="easyui-linkbutton">保存编辑</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+	
+		$(function(){
+	 		getAllReferenceStandard();
+	 		showSaveOrEditButton();
+		});
+	</script>
+  </body>
+</html>

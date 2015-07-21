@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>评价工程界面</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../../jquery-easyui-1.4.1/themes/bootstrap/easyui.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../jquery-easyui-1.4.1/themes/bootstrap/tabs.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../jquery-easyui-1.4.1/themes/bootstrap/menu.css"/>
+	<link rel="stylesheet" type="text/css" href="../../../jquery-easyui-1.4.1/themes/icon.css"/>
+	
+	<script type="text/javascript" src="../../../jquery-easyui-1.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../../../jquery-easyui-1.4.1/locale/easyui-lang-zh_CN.js"></script>
+	
+	<script charset="gb2312" type="text/javascript" src="js/project.js"></script>
+	
+	<script type="text/javascript" src="../../base/project.js"></script>
+</head>
+<body>
+	<div id='newMenu'></div>
+	<div id='openMenu'></div>
+	<div style="align:center;width:980px;height:600px;border:1px solid #ccc">
+		<div id="tt" class="easyui-tabs" data-options="fit:true">
+			<div id="tabmenu" title="评价工程" data-options="fit:true">
+				<div id="mm" class="easyui-menu">
+						<div  data-options="name:'new'">新建</div>
+						<div data-options="name:'open'">打开</div>
+				</div>
+				<div style="width:100%;height:100%">
+					<div style="padding:10px;font-size:15px">新建评价工程</div>
+					<div style="padding-left:15px;padding-top:10px;">
+						工程编号：<input type="text" style="width:250px;height:20px;">
+					</div>	
+		  			<div style="padding-left:15px;padding-top:10px;">
+						工程名称：<input type="text" style="width:250px;height:20px;">
+					</div>				
+					<div style="padding-left:15px;padding-top:20px;float:left">
+						工程描述：
+					</div>
+					<div style="padding-top:10px;">
+						<textarea style="width:590px;height:100px;padding-left:20pxs"></textarea>
+					</div>
+					<div style="float:left;padding-left:15px;padding-top:20px;">
+						评价项目：
+				   </div> 
+				 <div style="padding-top:10px;padding-left:20px;">
+					  <table id="myTable" style="width:590px;">
+					  </table>
+					   <div id="tb">
+                         <a class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="obj.add()">新增</a>
+                         <a id="save" class="easyui-linkbutton" data-options="iconCls:'icon-save',plain:true" onclick="obj.save()">保存</a>
+                       </div>
+
+			    </div>
+					
+					<div style="padding-left:300px;padding-top:20px;clear:both">
+			 			<button id="save" style="width:80px;height:30px">保存</button> 
+			 			<button id="cancle" style="width:80px;height:30px">取消</button>
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			<div title="污染指标">
+				 <iframe name="pollution" src="/EA/EAUI/view/pollution/pollution.html" style="width:100%;height:99%;border:0px">
+				</iframe>
+			</div>
+			
+			<div title="评价标准" style="padding:30px">
+			</div>
+			
+			<div title="设置">
+			</div>
+			
+			<div title="退出">
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

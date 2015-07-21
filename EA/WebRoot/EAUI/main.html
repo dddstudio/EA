@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>原有工业建筑改造及再利用环境评价软件</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=utf8">
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.4.1/themes/bootstrap/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../jquery-easyui-1.4.1/themes/icon.css"/>
+    <link rel="stylesheet"  type="text/css" href="css/main.css">
+    <link rel="stylesheet"  type="text/css" href="css/table.css">
+    <script type="text/javascript" src="../jquery-easyui-1.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+    <script type="text/javascript"  src="js/main.js"></script>
+    <script type="text/javascript"  src="base/sql.js"></script>
+    <script type="text/javascript"  src="base/db.js"></script>
+    <script type="text/javascript" src="view/evaluationStandard/standardjs/evalutionStandard.js"></script>
+    <script  type="text/javascript" charset="UTF-8" src="view/evalutionType/js/evalutionType.js"></script>
+  	<script  type="text/javascript" charset="UTF-8" src="view/evaluationProject/js/project.js"></script>
+  	<script type="text/javascript" src="view/pollution/js/pollution.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/out/js/air.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/out/js/soil.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/out/js/water.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/out/js/plant.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/js/evaluationProjectResult.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/in/js/sound.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/in/js/light.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/in/js/hot.js"></script>
+ 	<script type="text/javascript" src="view/evaluationProjectResult/in/js/inair.js"></script>
+ 	<script type="text/javascript" src="view/report/js/report.js"></script>
+  	<script type="text/javascript"  src="js/expression.js"></script>
+  	<script type="text/javascript" src="../jquery-easyui-1.4.1/jquery.flot.js"></script>
+ 	<script type="text/javascript" src="../jquery-easyui-1.4.1/doc.js"></script>
+ 	<script type="text/javascript" src="../jquery-easyui-1.4.1/base64.js"></script>
+  </head>
+  
+  <body>
+    <div class="mainContainer">
+    	<div class="easyui-tabs" id="functionBar" data-options="fit:true,border:false">
+	       <div title="首页">
+	         <div style="width:100%;height:100%;background:url(images/main.jpg);background-size: cover;">
+	         	<button type="button" onclick="createProject()" class="button blue">新建工程</button>
+	         	<button type="button" onclick="openProject()" class="button blue">打开工程</button>
+	         </div>
+			</div>
+	        <div title="评价工程" style="background:url(images/content.jpg);background-size: cover;" id="evaluationProjectTab" data-options="href: 'view/evaluationProject/project.html'">
+			</div>
+			<div title="污染指标" style="background:url(images/content.jpg);background-size: cover;" data-options="href: 'view/pollution/pollution.html'">
+			</div>
+			<div title="评价标准" style="background:url(images/content.jpg);background-size: cover;" id="evaluationStandardTab" data-options="href: 'view/evaluationStandard/evalutionStandard.html'">
+			
+			</div>
+			<div title="评价类别列表" style="background:url(images/content.jpg);background-size: cover;" id="evaluationTypeTab" data-options="href: 'view/evalutionType/evalutionType.html'">
+			</div>
+	    </div>
+	    <div id="evaluationProjectMenu">
+	    	<div data-options="iconCls:'icon-add',name:'new'">新建</div>
+		    <div data-options="iconCls:'icon-open',name:'open'">打开</div>
+	    </div>
+	    <div id="globalDialog" class="easyui-dialog globalDialog" 
+	    	data-options="modal:true,closed:true"></div>
+    </div>
+  </body>
+   <script type="text/javascript" src="view/evaluationProject/js/addProject.js"></script>
+   <script type="text/javascript" src="view/evaluationProject/js/selectProject.js"></script>
+   <script type="text/javascript" src="view/evaluationProject/js/updateProject.js"></script>
+   <script type="text/javascript" src="view/evaluationProject/js/deleteProject.js"></script>
+</html>

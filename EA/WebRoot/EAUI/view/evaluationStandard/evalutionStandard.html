@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>评价标准</title>
+<link rel="stylesheet" type="text/css" href="../../css/table.css">
+<script type="text/javascript"
+	src="../jquery-easyui-1.4.1/jquery.min.js"></script>
+<script type="text/javascript"
+	src="../jquery-easyui-1.4.1/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="standardjs/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="standardjs/jquery.media.js"></script>
+
+<script type="text/javascript" src="../../base/sql.js"></script>
+<script type="text/javascript" src="../../base/db.js"></script>
+
+
+		<style type="text/css">
+		   .rowStyle {
+			padding: 5px;
+		}
+		.textStyle { 
+			width: 460px;
+			height: 90px;
+		}
+		.commonInput {
+			border-left: 0px;
+			border-right: 0px;
+			border-top: 0px;
+			border-bottom: 1px solid #B7B9BF;
+			width: 250px;
+		}
+		</style>
+		
+</head>
+<body>
+   <script type="text/javascript">
+      $(function(){evaluationStandardLoad();});
+   </script>
+	<div style="padding-top:40px;font-size:25px; align:center;text-align:center;">
+				评价标准列表
+			</div>
+    <div style="padding-top:40px;">
+         <table id="evaluationStandardTable" style="width:100%;"></table>
+			 <div id="evaluationStandardtb1">
+                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true" onclick="evaluationStandardObj.evaluationStandardAdd()">新增</a>
+                <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit',plain:true" onclick="evaluationStandardObj.evaluationStandardEdit()">编辑</a>
+                <a href="#"  class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true" onclick="evaluationStandardObj.evaluationStandardDel()">删除</a>
+             </div>
+     
+	</div>
+	<div id="evaluationStandarddlg" class="easyui-dialog" style="width:600px;height:400px;"
+			closed="true" buttons="#evaluationStandard-buttons">
+		<div class="ftitle">参考标准基本信息</div>
+		<form id="evaluationStandardfm" method="post" novalidate>
+		    <div class="fitem" style="padding: 5px;">
+			   
+				<input type="hidden" id="StandardNum" name="StandardNum" style=" border-left: 0px;border-right: 0px;border-top: 0px;border-bottom: 1px solid #B7B9BF;width: 250px;" class="easyui-validatebox" required="true">
+			</div>
+		    <div class="fitem" style="padding: 5px;">
+			    <label>标准名称:</label>
+				<input id="StandardNam" name="StandardNam" style="border-left: 0px;border-right: 0px;border-top: 0px;border-bottom: 1px solid #B7B9BF;width: 250px;" class="easyui-validatebox" required="true">
+			</div>
+			<div class="fitem" style="padding: 5px;">
+				<label>文件链接:</label>
+				<input id ="fileURL" name="fileURL"  style="border-left: 0px;border-right: 0px;border-top: 0px;border-bottom: 1px solid #B7B9BF;width: 250px;" class="easyui-validatebox" value=""  required="true">
+			</div>
+			<div class="fitem" style="padding: 5px;">
+				<label>环境类型:</label>
+				<select name="EnvironmentType" id="EnvironmentType" style="border-left: 0px;border-right: 0px;border-top: 0px;border-bottom: 1px solid #B7B9BF;width: 250px;" class="easyui-validatebox" required="true">
+				   
+				   <option style="width:200px" value="室外">室外</option>
+				   <option style="width:200px" value="室内">室内</option>
+				   
+				</select>
+
+			</div>
+			
+			<div class="fitem" style="padding: 5px;">
+				<label>&nbsp;&nbsp;备注:</label>
+				<input id="remark" name="remark"  style="border-left: 0px;border-right: 0px;border-top: 0px;border-bottom: 1px solid #B7B9BF;width: 250px;"  style="width:140px;height:50px" 
+						>
+			</div>
+			<div class="fitem" style="padding: 5px;">
+				<label>评价类型:</label>
+				<select name="evalutionTypeNum" id="evalutionType" style="border-left: 0px;border-right: 0px;border-top: 0px;border-bottom: 1px solid #B7B9BF;width: 250px;" class="easyui-validatebox" required="true">
+			  
+				</select>
+
+			</div>
+        
+		</form>
+	</div>
+	
+	<div id="evaluationStandard-buttons">
+		<a id ="evaluationStandard_save" href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="evaluationStandardObj.evaluationStandardSave()">确认</a>
+
+		<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#evaluationStandarddlg').dialog('close')">取消</a>
+	</div>
+</body>
+
+</html>

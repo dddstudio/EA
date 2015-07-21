@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>污染指标界面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+</head>
+<body>
+<script type="text/javascript">
+	
+	$(function(){
+		pollutionIndicatorsLoad();
+	})
+</script>
+		<div style="padding-top:40px;font-size:25px; align:center;text-align:center;">
+				污染指标列表
+			</div>
+	<div style="padding-top: 40px;">
+		<table id="pollutionoutdoorTable" style="width:100%;"></table>
+		<div id="pollutiontb1">
+			<a href="#" class="easyui-linkbutton"
+				data-options="iconCls:'icon-add',plain:true"
+				onclick="pollutionobj.pollutionadd()">新增</a> <a href="#"
+				class="easyui-linkbutton"
+				data-options="iconCls:'icon-edit',plain:true"
+				onclick="pollutionobj.pollutionedit()">编辑</a> <a href="#"
+				class="easyui-linkbutton"
+				data-options="iconCls:'icon-remove',plain:true"
+				onclick="pollutionobj.pollutiondeleterow()">删除</a> <input
+				id="pollutionserachbox"></input>
+			<div id="pollutionserachboxmenu" style="width: 120px">
+				<div data-options="name:'evalutionTypeName'">评价类别</div>
+				<div data-options="name:'IndicatorsNam'">指标名称</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="pollutiondlg" class="easyui-dialog" style="width:500px;height:400px;padding:10px 20px"
+			closed="true" buttons="#pollutiondlg-buttons">
+		<div class="pollutionftitle">指标基本信息</div>
+		<form id="pollutionfm" method="post" novalidate>
+			<div class="pollutionfitem">
+				<label>评价类别:</label>
+
+				<select id="pollutionevalutionTypeNam" name="evalutionTypeNam" class="easyui-validatebox" required="true" missingMessage="请选择评价类别" style="width:275px">
+					
+				</select>
+
+			</div>
+
+			<div class="pollutionfitem">
+				<label>指标名称:</label>
+				<input id ="pollutionIndicatorsNam"  type="text"  missingMessage="请输入指标名称" required="true" style="width:275px">
+			</div>
+
+
+			<div class="pollutionfitem">
+				<label>污染限值:</label>
+				<input id="pollutionPollutionLimit" name="PollutionLimit" class="easyui-numberbox" precision="6" style="width:275px" >
+			</div>
+			<div class="pollutionfitem">
+				<label>指标单位:</label>
+				<input id="pollutionIndicatorsUnit" name="IndicatorsUnit" class="easyui-textbox" precision="6" style="width:275px" >
+			</div>
+			<div class="pollutionfitem">
+				<label>指标描述:</label>
+				<input id="pollutionIndicatorsDes" name="IndicatorsDes" class="easyui-textbox" data-options="multiline:true" style="width:275px;height:70px" >
+			</div>
+			
+			
+		</form>
+	</div>
+	<div id="pollutiondlg-buttons">
+		<a id ="pollutiondlg_save" href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="pollutionobj.pollutionsave()">保存</a>
+		<a id ="pollutiondlg_edit" href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="pollutionobj.pollutioneditsave()">编辑</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#pollutiondlg').dialog('close')">取消</a>
+	</div>
+	
+	<style type="text/css">
+		#pollutionfm{
+			margin:0;
+			padding:10px 30px;
+		}
+		.pollutionftitle{
+			font-size:20px;
+			font-weight:bold;
+			color:#666;
+			padding:5px 0;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc;
+		}
+		.pollutionfitem{
+			margin-bottom:5px;
+		}
+		.pollutionfitem label{
+			display:inline-block;
+			width:150px;
+		}
+	</style>
+	
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div title="评价类别">
+	<input type="text" style="display:none;" id="hiddenProjectNumber">
+		<div
+			style="padding-top: 40px; font-size: 25px; margin-left: 500px;">
+			设置评价标准</div>
+		<div style="margin-left: 338px;margin-top: 30px;">
+			<table id="evalutionCriterionTable" style="width: 500px;margin: 0 auto;">
+
+			</table>
+			
+			<div id="tb">
+			<a href="#" class="easyui-linkbutton" onclick="saveUpdatePollutionLimit()" data-options="iconCls:'icon-save',plain:true"></a>
+			<select id="allPollutionLimit" onchange="batchChoosePollutionLimit()"></select>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
